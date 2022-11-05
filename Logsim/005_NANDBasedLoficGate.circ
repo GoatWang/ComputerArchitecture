@@ -1,11 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <project source="2.7.1" version="1.0">
 This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
-<lib desc="#Wiring" name="0"/>
+<lib desc="#Wiring" name="0">
+    <tool name="Probe">
+      <a name="facing" val="west"/>
+    </tool>
+  </lib>
   <lib desc="#Gates" name="1"/>
   <lib desc="#Plexers" name="2"/>
   <lib desc="#Arithmetic" name="3"/>
-  <lib desc="#Memory" name="4"/>
+  <lib desc="#Memory" name="4">
+    <tool name="ROM">
+      <a name="contents">addr/data: 8 8
+0
+</a>
+    </tool>
+  </lib>
   <lib desc="#I/O" name="5"/>
   <lib desc="#Base" name="6">
     <tool name="Text Tool">
@@ -117,11 +127,11 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(100,640)" to="(150,640)"/>
     <wire from="(330,350)" to="(330,370)"/>
     <wire from="(460,600)" to="(460,620)"/>
+    <wire from="(110,410)" to="(110,430)"/>
     <wire from="(100,240)" to="(100,260)"/>
     <wire from="(100,160)" to="(100,180)"/>
     <wire from="(100,40)" to="(100,60)"/>
     <wire from="(110,330)" to="(110,350)"/>
-    <wire from="(110,410)" to="(110,430)"/>
     <wire from="(130,590)" to="(130,610)"/>
     <wire from="(230,570)" to="(230,590)"/>
     <wire from="(230,330)" to="(230,350)"/>
@@ -174,113 +184,128 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(450,600)" to="(460,600)"/>
     <wire from="(120,590)" to="(130,590)"/>
     <wire from="(860,490)" to="(870,490)"/>
+    <comp lib="1" loc="(210,40)" name="NAND Gate">
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="6" loc="(28,48)" name="Text">
+      <a name="text" val="NAND"/>
+    </comp>
     <comp lib="1" loc="(210,330)" name="NAND Gate">
       <a name="inputs" val="2"/>
     </comp>
-    <comp lib="1" loc="(990,200)" name="OR Gate"/>
+    <comp lib="0" loc="(570,600)" name="Probe">
+      <a name="facing" val="west"/>
+    </comp>
+    <comp lib="6" loc="(37,562)" name="Text">
+      <a name="text" val="XOR"/>
+    </comp>
+    <comp lib="0" loc="(330,110)" name="Probe">
+      <a name="facing" val="west"/>
+    </comp>
+    <comp lib="1" loc="(310,220)" name="NAND Gate">
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="0" loc="(80,330)" name="Constant">
+      <a name="value" val="0x0"/>
+    </comp>
     <comp lib="1" loc="(210,510)" name="NAND Gate">
       <a name="inputs" val="2"/>
     </comp>
     <comp lib="1" loc="(540,600)" name="NAND Gate">
       <a name="inputs" val="2"/>
     </comp>
-    <comp lib="1" loc="(930,520)" name="NAND Gate">
+    <comp lib="1" loc="(760,520)" name="NAND Gate">
       <a name="inputs" val="2"/>
     </comp>
-    <comp lib="0" loc="(80,330)" name="Constant">
-      <a name="value" val="0x0"/>
+    <comp lib="6" loc="(28,113)" name="Text">
+      <a name="text" val="AND"/>
     </comp>
-    <comp lib="0" loc="(80,100)" name="Constant"/>
-    <comp lib="0" loc="(660,560)" name="Constant">
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(960,50)" name="Probe"/>
-    <comp lib="0" loc="(80,180)" name="Constant">
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="1" loc="(210,590)" name="NAND Gate">
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="0" loc="(80,590)" name="Constant"/>
-    <comp lib="0" loc="(420,370)" name="Probe">
-      <a name="facing" val="west"/>
-    </comp>
-    <comp lib="0" loc="(660,480)" name="Constant"/>
     <comp lib="0" loc="(260,40)" name="Probe">
       <a name="facing" val="west"/>
     </comp>
-    <comp lib="0" loc="(80,410)" name="Constant">
+    <comp lib="0" loc="(760,50)" name="Constant">
       <a name="value" val="0x0"/>
     </comp>
-    <comp lib="1" loc="(880,70)" name="NAND Gate">
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="0" loc="(930,520)" name="Probe">
-      <a name="facing" val="west"/>
-    </comp>
-    <comp lib="0" loc="(570,600)" name="Probe">
-      <a name="facing" val="west"/>
-    </comp>
-    <comp lib="1" loc="(210,660)" name="NAND Gate">
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="1" loc="(210,40)" name="NAND Gate">
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="1" loc="(450,600)" name="NAND Gate">
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="1" loc="(210,110)" name="NAND Gate">
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="1" loc="(210,260)" name="NAND Gate">
+    <comp lib="0" loc="(80,100)" name="Constant"/>
+    <comp lib="1" loc="(310,370)" name="NAND Gate">
       <a name="inputs" val="2"/>
     </comp>
     <comp lib="0" loc="(340,220)" name="Probe">
       <a name="facing" val="west"/>
     </comp>
-    <comp lib="0" loc="(80,510)" name="Constant"/>
-    <comp lib="0" loc="(80,40)" name="Constant"/>
-    <comp lib="1" loc="(310,550)" name="NAND Gate">
+    <comp lib="1" loc="(210,110)" name="NAND Gate">
       <a name="inputs" val="2"/>
     </comp>
-    <comp lib="1" loc="(310,220)" name="NAND Gate">
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="0" loc="(80,120)" name="Constant">
+    <comp lib="0" loc="(80,410)" name="Constant">
       <a name="value" val="0x0"/>
     </comp>
-    <comp lib="1" loc="(860,490)" name="NAND Gate">
+    <comp lib="0" loc="(80,180)" name="Constant">
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(80,260)" name="Constant"/>
+    <comp lib="0" loc="(660,480)" name="Constant"/>
+    <comp lib="1" loc="(300,110)" name="NAND Gate">
       <a name="inputs" val="2"/>
     </comp>
-    <comp lib="1" loc="(310,370)" name="NAND Gate">
+    <comp lib="1" loc="(930,520)" name="NAND Gate">
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="1" loc="(210,660)" name="NAND Gate">
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="1" loc="(880,70)" name="NAND Gate">
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="1" loc="(990,200)" name="OR Gate"/>
+    <comp lib="0" loc="(420,370)" name="Probe">
+      <a name="facing" val="west"/>
+    </comp>
+    <comp lib="1" loc="(450,600)" name="NAND Gate">
       <a name="inputs" val="2"/>
     </comp>
     <comp lib="1" loc="(420,370)" name="NAND Gate">
       <a name="inputs" val="2"/>
     </comp>
-    <comp lib="1" loc="(210,180)" name="NAND Gate">
+    <comp lib="0" loc="(80,120)" name="Constant">
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="1" loc="(210,260)" name="NAND Gate">
       <a name="inputs" val="2"/>
     </comp>
-    <comp lib="0" loc="(330,110)" name="Probe">
+    <comp lib="0" loc="(80,510)" name="Constant"/>
+    <comp lib="0" loc="(930,520)" name="Probe">
       <a name="facing" val="west"/>
     </comp>
-    <comp lib="1" loc="(300,110)" name="NAND Gate">
+    <comp lib="1" loc="(210,180)" name="NAND Gate">
       <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="0" loc="(80,260)" name="Constant"/>
-    <comp lib="1" loc="(860,550)" name="NAND Gate">
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="0" loc="(760,50)" name="Constant">
-      <a name="value" val="0x0"/>
     </comp>
     <comp lib="1" loc="(210,410)" name="NAND Gate">
       <a name="inputs" val="2"/>
     </comp>
-    <comp lib="1" loc="(760,520)" name="NAND Gate">
+    <comp lib="1" loc="(860,550)" name="NAND Gate">
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="0" loc="(960,50)" name="Probe"/>
+    <comp lib="1" loc="(860,490)" name="NAND Gate">
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="6" loc="(20,380)" name="Text">
+      <a name="text" val="NOR"/>
+    </comp>
+    <comp lib="0" loc="(660,560)" name="Constant">
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(80,40)" name="Constant"/>
+    <comp lib="1" loc="(310,550)" name="NAND Gate">
       <a name="inputs" val="2"/>
     </comp>
     <comp lib="0" loc="(1010,160)" name="Probe"/>
+    <comp lib="0" loc="(80,590)" name="Constant"/>
+    <comp lib="6" loc="(29,218)" name="Text">
+      <a name="text" val="OR"/>
+    </comp>
+    <comp lib="1" loc="(210,590)" name="NAND Gate">
+      <a name="inputs" val="2"/>
+    </comp>
   </circuit>
 </project>
