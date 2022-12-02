@@ -1,3 +1,5 @@
 Logisim.app
 .DS_Store
 ModuleSim.jar
+compile
+*.jar
