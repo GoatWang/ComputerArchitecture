@@ -1,0 +1,26 @@
+Gef installation for Ubuntu and WSL
+Run the following commands:
+
+sudo apt update && sudo apt upgrade
+sudo apt install qemu
+sudo apt install binutils-arm-none-eabi gcc-arm-none-eabi
+sudo apt install gdb-multiarch
+sudo apt install qemu-user
+sudo apt install curl
+wget -q -O- https://github.com/hugsy/gef/raw/master/scripts/gef.sh | sh
+bash -c "$(curl -fsSL http://gef.blah.cat/sh)"
+
+
+Gef installation for lab machines
+Run the following commands:
+
+wget -O ~/.gdbinit-gef.py -q https://raw.githubusercontent.com/hugsy/gef-legacy/master/gef.py
+echo source ~/.gdbinit-gef.py >> ~/.gdbinit
+
+
+Scripts to auto compile code and start the debugger (similar to Makefiles in C) are provided:
+./au.sh <FILENAME> <PORTNUM>    # for Ubuntu/WSL
+./al.sh <FILENAME> <PORTNUM>    # for lab machines
+
+For example, to compile a file named tst.s on a lab machine, the command could be:
+./al.sh tst 1234
