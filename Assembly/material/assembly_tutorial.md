@@ -21,7 +21,6 @@ wget -q -O- https://github.com/hugsy/gef/raw/master/scripts/gef.sh | sh
 bash -c "$(curl -fsSL http://gef.blah.cat/sh)"
 ```
 
-
 ## Execution
 1. Compile
 ```
@@ -36,13 +35,13 @@ qemu-arm -singlestep -g 1234 tst &
 
 3. debug tool: gdb
 ```
-gdb
+gdb # or arm-none-eabi-gdb
 ```
 
 4. debug tool: gef
 ```
 # scl enable devtoolset-11 'gdb' # Debian 
-gdb-multiarch -q
+gdb-multiarch -q # Ubuntu
 ```
 
 5. debug commands
@@ -50,6 +49,7 @@ gdb-multiarch -q
     2. `break <linenum>`: sets a breakpoint at the line number specified by `<linenum>`. This breakpoint will make the execution stop when it reaches this line.
     3. `break <label>`: sets a breakpoint at the label. For example, you might want to stop the code when it reaches _end in the code above.
     4. `step <N>`:  steps N instructions forward.
+
 6. internals of the hardware commands
     1. `print <registers>`: will print the content of the register.
     2. `info reg`: will print the content of all integer registers.
